@@ -1,0 +1,80 @@
+@mixin underline($color, $width){
+    cursor: pointer;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: $width;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transform-origin: 100% 50%;
+        transform: scaleX(0);
+        background: $color;
+        pointer-events: none;
+        transition: transform cubic-bezier(0.76, 0.09, 0.215, 1) var(--time);
+    }
+    @media (min-width: 768px) {
+        &:hover::after{
+            transform-origin: 0% 50%;
+            transform: scaleX(1);
+        }
+    }
+}
+
+@mixin desktop-xl {
+    @media (max-width: 1870px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1640px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 1365px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet-s {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mobile-s {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover:hover) {
+        @content;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

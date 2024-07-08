@@ -1,0 +1,47 @@
+@use "./mixins" as m;
+
+
+
+
+
+:root{
+    // --font: 'Montserrat';
+    // --font-title: 'FoglihtenNo06';
+
+    --alert: #E73636;
+    --success: #008E6C;
+
+    --bg-prim: #FFFFFF;
+    --bg-sec: #E2E9F3;
+    --bg-tert: #F6F6F6;
+    --bg-accent: #003D8E;
+
+    --text-prim: #242629;
+    --text-sec: #9D9D9E;
+    --text-tert: #E2E9F3;
+    --text-accent: #003e8f;
+
+    --icon-prim: #242629;
+    --icon-accent: #003D8E;
+    --icon-sec: #BBBBBB;
+    --icon-cntrst: #FFFFFF;
+
+    --btn-prim: #003D8E;
+    --btn-prim-hover: #0550B1;
+    --btn-sec: #242629;
+    --btn-border: #E9E9E9;
+    --btn-cntrst: #FFFFFF;
+
+    --line-light: #E9E9E9;
+    --line-medium: #BBBBBB;
+    --line-dark: #9F9F9F;
+
+    --time: 0.5s;
+
+    --header-height: 90px;
+    --width-container: 1740px;
+
+    @include m.tablet {
+        --header-height: 60px;
+    }
+}
